@@ -34,7 +34,8 @@ def submit():
         total = science + maths + english + datascience
         average = total / 4
 
-        return redirect(url_for("success", score=average))
+        return redirect(url_for("success", score=int(average)))
+    return render_template("results.html")  
 
 if __name__ == '__main__':
     app.run(debug=True)
